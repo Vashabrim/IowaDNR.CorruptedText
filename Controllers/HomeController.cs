@@ -29,7 +29,7 @@ namespace IowaDNR.CorruptedText.Controllers
             Microsoft.Extensions.Primitives.StringValues txtToSearch = HttpContext.Request.Form["TextToSearch"];
             Microsoft.Extensions.Primitives.StringValues txtToFind = HttpContext.Request.Form["SearchCombo"];
             ResultsViewModel count = await SearchTheText(txtToSearch, txtToFind);
-            return Content("Hello, the combination " + txtToFind + " was found " + count.ResultsCount.ToString() + " times. The text that was searched: " + count.SearchText);
+            return View("Results", count);
         }
 
         public async Task<ResultsViewModel> SearchTheText(string results, string textToFind)

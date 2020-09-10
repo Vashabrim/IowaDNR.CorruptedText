@@ -1,0 +1,15 @@
+﻿@model ResultsViewModel
+@{
+    ViewData["Title"] = "Results";
+   
+}
+
+<h2>Results</h2>
+<p>Hello, there were @Model.ResultsCount instances of the combination @Model.TextToFind found in the submitted text.</p>
+<div class="row">
+    @foreach (var bit in Model.ReturnText)
+    {
+        <div> @bit.Chunk&nbsp;</div>
+    }
+</div>
+
