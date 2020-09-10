@@ -1,8 +1,18 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="row">
+    <div class="input-group">
+        <label class="input-group">Text to Search</label>
+        <textarea cols="80" rows="10" id="textToSearch"></textarea>
+    </div>
+    <div class="row">
+        <div class="input-group">
+            <label class="input-group" id="indexText">Text to Find</label>
+            <input type="text" class="form-control" />
+            <div class="input-group-append">
+                <button class="btn btn-outline-primary" type="submit">Search</button>
+            </div>
+        </div>
+    </div>
 </div>
