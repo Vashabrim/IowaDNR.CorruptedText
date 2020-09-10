@@ -2,17 +2,20 @@
     ViewData["Title"] = "Home Page";
 }
 <div class="row">
-    <div class="input-group">
-        <label class="input-group">Text to Search</label>
-        <textarea cols="80" rows="10" id="textToSearch"></textarea>
-    </div>
-    <div class="row">
+    <form method="post" action="Home/SearchText">
         <div class="input-group">
-            <label class="input-group" id="indexText">Text to Find</label>
-            <input type="text" class="form-control" />
-            <div class="input-group-append">
-                <button class="btn btn-outline-primary" type="submit">Search</button>
+            <label class="input-group">Text to Search</label>
+            <textarea cols="80" rows="10" id="textToSearch" name="TextToSearch"></textarea>
+        </div>
+        <div class="row">
+            <div class="input-group">
+                <label class="input-group" id="indexText">Text to Find</label>
+                <input type="text" class="form-control" name="SearchCombo" />
+                <div class="input-group-append">
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
+
 </div>
