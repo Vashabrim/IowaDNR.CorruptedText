@@ -10,5 +10,10 @@ namespace IowaDNR.CorruptedText.Models
         public string SearchText { get; set; }
         public string TextToFind { get; set; }
         public int ResultsCount { get; set; }
+        public List<Result> ReturnText { get; set; }
+    }
+    public class Result
+    {
+        public string Chunk { get; set; }
     }
 }
